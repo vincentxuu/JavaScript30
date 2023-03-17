@@ -33,7 +33,7 @@ const dom = document.querySelector(`div[data-key="${e.keyCode}"]`);
     if (dom) dom.classList.add("playing"); 
 ```
 
-*移除元素樣式*
+*取得按鈕元素控制並監聽、移除元素樣式*
 ```
 document.querySelectorAll(".key").forEach(function (key) {
           key.addEventListener("transitionend", transitionendHandler);
@@ -46,7 +46,7 @@ document.querySelectorAll(".key").forEach(function (key) {
 ```
 ---
 
-`不同思維解法差異蠻多的，蠻有趣的，學習到很多，補充在下方`
+`不同表述方式法，結果一樣，補充在下方`
 
     正面表述
 
