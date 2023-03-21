@@ -39,28 +39,130 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
 
+    // let ans = inventors.filter(function(person){
+    //   if(person.year >= 1500 && person.year < 1600){
+    //   return person;
+    //   }
+    // });
+
+    // console.table(ans);
+
+    //簡化 箭頭函式
+    // let ansss = inventors.filter(person => (person.year >= 1500 && person.year < 1600));
+   
+    // console.table(ansss);
+
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
 
+    // 用map寫
+    // const ans = inventors.map(function(person){
+    //   return person.first+''+person.last
+    // })
+    // console.table(ans)
+
+    //簡化 箭頭函式＋樣板字串
+    // const ans = inventors.map(person =>`${person.first}${person.last}`)
+    // console.table(ans)
+
+    //用 forEach寫
+    // let anss = []
+    // inventors.forEach(function(person){
+    //   return anss.push(person.first + " " +person.last )
+    // })
+
+    // console.table(anss)
+
+    //簡化 箭頭函式＋樣板字串
+    // let anss = []
+    // inventors.forEach(person =>anss.push(`${person.first} ${person.last}`))
+
+    // console.table(anss)
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+      // const person = inventors.sort(function(a,b){
+      //   if(a.year > b.year ){
+      //     return 1;
+      //   }else{
+      //     return -1;
+      //   }
+      // });
+      // console.table(person)
+
+      // //簡化 箭頭函式 條件運算子
+      // const person = inventors.sort((a,b) => a.year > b.year ? 1 : -1 ) 
+      // console.table(person)
+
+      // const person = inventors.sort((a,b) => a.year - b.year ) 
+      // console.table(person)
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+        // const totalYears = inventors.reduce(function(total,person){
+        //   return total+(person.passed-person.year);
+        // },0);
 
+        // console.log(totalYears)
+        // // 簡化 箭頭函式
+        // const totalYears = inventors.reduce((total,person) => {
+        //   return total+(person.passed-person.year);
+        // },0);
+
+        // console.log(totalYears)
     // 5. Sort the inventors by years lived
+        // inventors.forEach(function(inventor){
+        //   inventor.years = inventor.passed-inventor.year
+        // });
+
+        // const yearsList = inventors.sort(function(a,b){
+        //   if ((a.passed - a.year) > (b.passed - b.year)){
+        //     return 1;
+        //   }else {
+        //     return -1;
+        //   }
+        // }) 
+        // console.table(yearsList);
+        // //簡化 箭頭函式
+        inventors.forEach(inventor => inventor.years = inventor.passed-inventor.year);
+
+        const yearsList = inventors.sort((a,b) =>
+        (a.passed - a.year) > (b.passed - b.year) ? 1: -1 )
+        console.table(yearsList);
+
+        const yearsList = inventors.sort((a,b) =>
+        (a.passed - a.year) - (b.passed - b.year) )
+        console.table(yearsList);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+      // const category = document.querySelector('.mw-category');
+      // const links = Array.from(category.querySelectorAll('a'));
+      // const de = links.map(link => link.textContent).filter(streetName => streetName.includes('de'));
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    // const alpha = people.sort((lastOne, nextOne) => {
+    //   const [aLast, aFirst] = lastOne.split(', ');
+    //   const [bLast, bFirst] = nextOne.split(', ');
+    //   return aLast > bLast ? 1 :-1 ; 
+    // });
+    // console.table(alpha);
+      // let list = people.sort((a,b)=>{
+      //   let [aFirst,aLast] = a.split(',');
+      //   let [bFirst,bLast] = b.split(',');
+      //   return aLast > bLast ? 1 : bLast > aLast ? -1 : 0; 
+      // })
+      // console.table(list);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    // let sumList = data.reduce((object,item)=>{
+    //     if(!object[item]) object[item] = 1
+    //     else object[item]+=1
+    //     return object
+    // },{})
+    // console.table(sumList)
   </script>
 </body>
 </html>
