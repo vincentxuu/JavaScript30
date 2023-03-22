@@ -96,11 +96,15 @@ function numberWithCommas(x) {
   return (x * 1) .toLocalString();
 }
 ```
-關於正規表達式/正規表示式/正則表達式/正則運算...超多種用法，英文是Regular Expression
+關於正規表達式
 
-實在是太艱澀難懂，找了一個影片跟練習網站之後要安排時間來鑽研。
+又稱正規表示式/正則表達式/正則運算...超多種用法），英文是Regular Expression，實在是太艱澀難懂，找了一個影片跟練習網站之後要安排時間來鑽研。
 
 練習網站：[RegexOne](https://regexone.com/)
+
+練習網站：[ihateregex](https://ihateregex.io/)
+
+練習網站：[regexr](https://regexr.com/)
 
 YT影片：[深入淺出正則表達式](https://www.youtube.com/watch?v=Ex6cCWDwNJU&ab_channel=Will%E4%BF%9D%E5%93%A5)
 
@@ -111,9 +115,9 @@ YT影片：[深入淺出正則表達式](https://www.youtube.com/watch?v=Ex6cCWD
 github:
 - [JS30-Day6-Ajax Type Ahead](https://github.com/a90100/JavaScript30/tree/master/06%20-%20Type%20Ahead)
 - [06 - Type Ahead](https://github.com/guahsu/JavaScript30/tree/master/06_Type-Ahead)
-- [03 CSS Variable](https://github.com/soyaine/JavaScript30/tree/master/03%20-%20CSS%20Variables)
+- [06 Fetch 结合 filter 实现快速匹配古诗](https://github.com/soyaine/JavaScript30/tree/master/06%20-%20Type%20Ahead)
 
-hackmd筆記：[JS30 - laying with CSS Variables and JS](https://hackmd.io/JY6jXBqqRT-VV3XhPH6YkA?view)
+hackmd筆記：[JS30 - Ajax Type Ahead](https://hackmd.io/uqMoFG93Rr224PMcxNYbRw)
 
 鐵人賽文章：[JS30-Day6-Type Ahead](https://ithelp.ithome.com.tw/articles/10193500)
 
