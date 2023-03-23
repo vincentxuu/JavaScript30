@@ -7,7 +7,60 @@
 </head>
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
+
 <script>
+  ;(function(){
+    let canvas = document.querySelector('#draw');
+    let ctx = canvas.getContext("2d");
+    let colorDeg = 0;
+    let lineWidth = 50;
+    let direction = -1;
+    ctx.strokeStyle =`hsl(${colorDeg},100%,50%)`;
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    let x = 0,
+        y = 0;
+
+    let drawing = false;
+    canvas.addEventListener('mousedown',(e)=>{
+        drawing = true;
+        console.log(e);
+        [x,y] = [e.offsetX,e.offsetY];
+    });
+    canvas.addEventListener('mousemove',(e)=>{
+      if(!drawing) return  ;
+      console.log('draw');
+      colorDeg = colorDeg < 360 ? colorDeg + 1  : 0 ;
+      ctx.strokeStyle =`hsl(${colorDeg},100%,50%)`;
+      
+      if (lineWidth < 1 || lineWidth >50){
+        direction *= -1;
+      }
+      lineWidth += direction;
+      console.log(lineWidth);
+      ctx.lineWidth = lineWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(x,y);
+      ctx.lineTo(e.offsetX,e.offsetY);
+      [x,y] = [e.offsetX,e.offsetY];
+      ctx.stroke();
+
+    });
+    canvas.addEventListener('mouseup',()=>{
+      drawing = false;
+    });
+    // canvas.addEventListener('mousedown',()=>{
+    //   drawing = false;
+    // })
+    canvas.addEventListener('mouseleave',()=>{
+      drawing = false;
+    })
+
+  })()
+
 </script>
 
 <style>
