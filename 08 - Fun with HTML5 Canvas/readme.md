@@ -11,7 +11,7 @@
 1. canas設定
 2. 取得元素的控制權
 3. 監聽滑鼠
-4. 控制按鈕來改變畫面
+4. 控制滑鼠來改變畫面
 
 *canas設定*
 ```
@@ -42,7 +42,7 @@ canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
 ```
 
-*控制按鈕來改變CSS*
+*控制滑鼠來改變畫面*
 ```
 let isDrawing = false;
 let lastX = 0;
@@ -82,8 +82,15 @@ function draw(e) {
 
 `同樣都是判斷看到不同思維，都覺得很有收穫，補充在下方`
 ```
- //一樣都是選擇判斷，不同做法
+//顏色變化
+hue++;
+  if (hue >= 360) {
+    hue = 0;
+  }
 
+colorDeg = colorDeg < 360 ? colorDeg + 1  : 0 ;
+
+//線條變化
 if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
     direction = !direction;
   }
