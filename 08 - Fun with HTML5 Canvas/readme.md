@@ -8,12 +8,12 @@
 ### 學習筆記：
 
 關鍵
-1. canas設定
+1. canvas設定
 2. 取得元素的控制權
-3. 監聽滑鼠
+3. 監聽滑鼠，放入狀態判斷
 4. 控制滑鼠來改變畫面
 
-*canas設定*
+*canvas設定*
 ```
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -29,8 +29,14 @@ const canvas = document.querySelector('#draw');
 ```
 
 
-*監聽元素*
+*監聽元素，放入狀態判斷*
 ```
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = true;
+
 canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
@@ -44,12 +50,6 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 
 *控制滑鼠來改變畫面*
 ```
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-let hue = 0;
-let direction = true;
-
 function draw(e) {
   if (!isDrawing) return; // stop the fn from running when they are not moused down
   console.log(e);
