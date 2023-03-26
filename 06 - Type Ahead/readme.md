@@ -113,7 +113,6 @@ YT影片：[深入淺出正則表達式](https://www.youtube.com/watch?v=Ex6cCWD
 
 ## 參考資料
 github:
-- [JS30-Day6-Ajax Type Ahead](https://github.com/a90100/JavaScript30/tree/master/06%20-%20Type%20Ahead)
 - [06 - Type Ahead](https://github.com/guahsu/JavaScript30/tree/master/06_Type-Ahead)
 - [06 Fetch 结合 filter 实现快速匹配古诗](https://github.com/soyaine/JavaScript30/tree/master/06%20-%20Type%20Ahead)
 

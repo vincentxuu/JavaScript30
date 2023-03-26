@@ -70,7 +70,6 @@ setDate();
 
 ## 參考資料
 github:
-- [JS30-Day2-CSS + JS Clock](https://github.com/a90100/JavaScript30/tree/master/02%20-%20JS%20and%20CSS%20Clock)
 - [02 - JS and CSS Clock](https://github.com/guahsu/JavaScript30/tree/master/02_JS-and-CSS-Clock)
 - [02 纯 JS、CSS 时钟 中文指南](https://github.com/soyaine/JavaScript30/tree/master/02%20-%20JS%20%2B%20CSS%20Clock)
 

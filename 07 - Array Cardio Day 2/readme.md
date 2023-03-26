@@ -70,7 +70,6 @@ console.log(newComment)
 
 ## 參考資料
 github:
-- [JS30-Day7-Array Cardio 2](https://github.com/a90100/JavaScript30/tree/master/07%20-%20Array%20Cardio%20Day%202)
 - [07 - Array Cardio Day 2](https://github.com/guahsu/JavaScript30/tree/master/07_Array-Cardio-Day-2)
 - [07 Array Cardio 💪 指南二](https://github.com/soyaine/JavaScript30/tree/master/07%20-%20Array%20Cardio%20Day%202)
 

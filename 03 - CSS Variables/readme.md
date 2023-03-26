@@ -82,7 +82,6 @@ function handleUpdate() {
 
 ## 參考資料
 github:
-- [JS30-Day3-Scoped CSS Variables and JS](https://github.com/a90100/JavaScript30/tree/master/03%20-%20CSS%20Variables)
 - [03 - CSS Variables](https://github.com/guahsu/JavaScript30/tree/master/03_CSS-Variables)
 - [03 CSS Variable](https://github.com/soyaine/JavaScript30/tree/master/03%20-%20CSS%20Variables)
 

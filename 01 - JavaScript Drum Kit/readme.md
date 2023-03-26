@@ -62,7 +62,6 @@ document.querySelectorAll(".key").forEach(function (key) {
 
 ## 參考資料
 github:
-- [JS30-Day1-JavaScript Drum Kit](https://github.com/a90100/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit)
 - [01 - JavaScript Drum Kit](https://github.com/guahsu/JavaScript30/tree/master/01_Java-Script-Drum-Kit)
 - [01 JavaScript Drum Kit 中文指南](https://github.com/soyaine/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit)
 

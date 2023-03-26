@@ -165,7 +165,6 @@ const yearsList = inventors.sort((a,b) => (a.passed - a.year) - (b.passed - b.ye
 
 ## 參考資料
 github:
-- [JS30-Day4-Array Cardio 1](https://github.com/a90100/JavaScript30/tree/master/04%20-%20Array%20Cardio%20Day%201)
 - [04 - Array Cardio Day 1](https://github.com/guahsu/JavaScript30/tree/master/04_Array-Cardio-Day-1)
 - [04 Array Cardio 💪 指南一](https://github.com/soyaine/JavaScript30/tree/master/04%20-%20Array%20Cardio%20Day%201)
 

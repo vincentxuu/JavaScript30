@@ -111,7 +111,6 @@ console.log(123,456)
 
 ## 參考資料
 github:
-- [JS30-Day9-14 Must Know Dev Tools Tricks](https://github.com/a90100/JavaScript30/tree/master/09%20-%20Dev%20Tools%20Domination)
 - [09 - Dev Tools Domination](https://github.com/guahsu/JavaScript30/tree/master/09_Dev-Tools-Domination)
 - [09 Console 调试技巧指南](https://github.com/soyaine/JavaScript30/tree/master/09%20-%20Dev%20Tools%20Domination)
 

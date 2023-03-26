@@ -93,7 +93,6 @@ function toggleActive(e){
 
 ## 參考資料
 github:
-- [JS30-Day5-Flex Panels](https://github.com/a90100/JavaScript30/tree/master/05%20-%20Flex%20Panel%20Gallery)
 - [05 - Flex Panel Gallery](https://github.com/guahsu/JavaScript30/tree/master/05_Flex-Panel-Gallery)
 - [05 Flex 实现可伸缩的图片墙 中文指南](https://github.com/soyaine/JavaScript30/tree/master/05%20-%20Flex%20Panel%20Gallery)
 

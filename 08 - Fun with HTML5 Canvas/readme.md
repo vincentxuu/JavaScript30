@@ -112,7 +112,6 @@ ctx.lineWidth = lineWidth;
 
 ## 參考資料
 github:
-- [JS30-Day8-Fun with HTML5 Canvas](https://github.com/a90100/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas)
 - [08 - Fun with HTML5 Canvas](https://github.com/guahsu/JavaScript30/tree/master/08_Fun-with-HTML5-Canvas)
 - [08 HTML5 Canvas 实现彩虹画笔绘画板指南](https://github.com/soyaine/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas)
 
