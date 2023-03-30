@@ -58,7 +58,28 @@
         if (callNow) func.apply(context, args);
       };
     }
+    const imgAll = document.querySelectorAll('.slide-in');
+    window.addEventListener('scroll',debounce(handler));
 
+    function handler(){
+      imgAll.forEach( img =>{
+        //條件一 
+        let imgShow = img.offsetTop + img.height/2;
+        let windowHeight = window.scrollY + window.innerHeight;
+        let imgAppear = windowHeight > imgShow;
+
+        //條件二
+        let imgBottom = img.offsetTop + img.height;
+        let imgOnWindow = imgBottom > window.scrollY;
+
+        if( imgOnWindow && imgAppear ){
+          img.classList.add('active');
+          console.log('123')
+        } else {
+          img.classList.remove('active');
+        } ;
+      });
+    }
   </script>
 
   <style>

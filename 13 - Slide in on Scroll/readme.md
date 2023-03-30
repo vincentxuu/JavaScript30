@@ -1,7 +1,7 @@
-﻿# JS30-Day11-Custom HTML5 Video Player
+﻿# JS30-Day13-Slide In on Scroll
 
 ### 今日重點：
-#### 操作影片播放器的按鈕，達到快轉、倒退、播放速率高低、音量大小的效果。
+#### 滾動視窗，讓圖片產生飛進飛出的動態效果。
 
 --- 
 
@@ -10,131 +10,48 @@
 關鍵
 1. 取得元素的控制權
 2. 監聽元素
-3. 放入判斷改變畫面
+3. 放入判斷改變圖片CSS
 
 *取得元素的控制權*
 ``` 
-const player = document.querySelector('.player');
-const video = player.querySelector('.viewer');
-const progress = player.querySelector('.progress');
-const progressBar = player.querySelector('.progress__filled');
-const toggle = player.querySelector('.toggle');
-const skipButtons = player.querySelectorAll('[data-skip]');
-const ranges = player.querySelectorAll('.player__slider');
+const sliderImages = document.querySelectorAll('.slide-in');
 ```
-
 
 *監聽元素*
 ```
-let mousedown = false;
-
-video.addEventListener('click',togglePlay)
-toggle.addEventListener('click',togglePlay)
-video.addEventListener('play',updateButton)
-video.addEventListener('pause',updateButton)
-video.addEventListener('timeupdate',handleProgress)
-skipButtons.forEach(button => button.addEventListener('click',skip))
-ranges.forEach(input => input.addEventListener('change',handleRangeUpdate))
-ranges.forEach(input => input.addEventListener('mousemove',handleRangeUpdate))
-progress.addEventListener('click',scrub)
-progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
-progress.addEventListener('mousedown',()=> mosuedown = true);
-progress.addEventListener('mouseup',()=> mousedown = false);
+window.addEventListener('scroll', debounce(checkSlide));
 ```
 
-*放入判斷改變影片*
+*放入判斷改變圖片CSS*
 ```
-function togglePlay() {
-  const method = video.paused ? "play" : "pause";
-  video[method]();
-}
-
-// function togglePlay(){
-//     if (video.paused){
-//         video.play();
-//     }else {
-//         video.pause();
-//     }
-// }
-
-function updateButton(e) {
-  const icon = this.paused ? "►" : "❚ ❚";
-  toggle.textContent = icon;
-}
-
-// function updateButton(e){
-//     if (this.paused){
-//         toggle.textContent = '►'
-//     }else{
-//         toggle.textContent = '❚ ❚'
-//     }
-// }
-
-function skip() {
-  console.log(this.dataset.skip);
-  video.currentTime += parseFloat(this.dataset.skip);
-}
-
-function handleRangeUpdate() {
-  console.log(this.value);
-  console.log(this.name);
-  video[this.name] = this.value;
-}
-
-function handleProgress() {
-  const percent = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = `${percent}%`;
-}
-
-function scrub(e) {
-  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-  video.currentTime = scrubTime;
-}
-```
----
-
-`一種判斷兩種寫法，補充在下方`
-```
-//一般if判斷
-function togglePlay(){
-    if (video.paused){
-        video.play();
-    }else {
-        video.pause();
+function checkSlide() {
+      sliderImages.forEach(sliderImage => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        // bottom of the image
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPast = window.scrollY < imageBottom;
+        if (isHalfShown && isNotScrolledPast) {
+          sliderImage.classList.add('active');
+        } else {
+          sliderImage.classList.remove('active');
+        }
+      });
     }
-}
-
-function updateButton(e){
-    if (this.paused){
-        toggle.textContent = '►'
-    }else{
-        toggle.textContent = '❚ ❚'
-    }
-}
-
-//三元運算子
-function togglePlay(){
-    const method = video.paused ? 'play' : 'pause';
-    video[method]();
-}
-
-function updateButton(e){
-    const icon = this.paused ? '►' : '❚ ❚'
-    toggle.textContent = icon
-}
 ```
 --- 
 
 ## 參考資料
 github:
-- [11 - Custom Video Player](https://github.com/guahsu/JavaScript30/tree/master/11_Custom-Video-Player)
-- [11 自定义视频播放器](https://github.com/soyaine/JavaScript30/tree/master/11%20-%20Custom%20Video%20Player)
+- [13 - Slide in on Scroll](https://github.com/guahsu/JavaScript30/tree/master/13_Slide-in-on-Scroll)
+- [13 图片随屏幕滚动而滑入滑出的效果指南](https://github.com/soyaine/JavaScript30/tree/master/13%20-%20Slide%20in%20on%20Scroll)
 
-hackmd筆記：[JS30 - Custom HTML5 Video Player](https://hackmd.io/@dadidi910/r1tZbV2pu)
+hackmd筆記：[JS30 - Slide in on Scroll](https://hackmd.io/t5LFL4FYTCOzYK4CdMzCqw?view)
 
-鐵人賽文章：[JS30-Day11-Custom Video Player](https://ithelp.ithome.com.tw/articles/10194816)
+鐵人賽文章：[JS30-Day13-Slide in on Scroll](https://ithelp.ithome.com.tw/articles/10195246)
 
-YT影片：[深入淺出 Javascript30 快速導覽：Day 11：Custom Video Player](https://www.youtube.com/watch?v=gS4RJkcEyPo&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&index=13&t=1499s)
+YT影片：[深入淺出 Javascript30 快速導覽：Day 13：Slide in on Scroll](https://www.youtube.com/watch?v=PRRZlAVvJ7A&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&index=15&t=1751s)
 
 
 
