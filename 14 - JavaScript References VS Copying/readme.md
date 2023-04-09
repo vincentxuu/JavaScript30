@@ -9,7 +9,7 @@
 ### 學習筆記：
 
   ```
-  //數字與字串的參考與複製
+  //數字與字串的參考
     let age =100;
     let age2= age;
     console.log(age,age2);//100 100
