@@ -1,8 +1,8 @@
-﻿# JS30-Day16-LocalStorage and Event Delegation
+﻿# JS30-Day17-Sorting Band Names without articles
 
 
 ### 今日重點：
-#### 讓網頁上的文字陰影可以跟著滑鼠移動。
+#### 將陣列中的資料做排序，顯示在網頁上。
 
 --- 
 
@@ -57,27 +57,32 @@
 不同寫法：
 
 ```
-//No.1
-        let x = e.offsetX ;
-        let y = e.offsetY ;
-//No.2
-        let { offsetX , offsetY } = e ;
-//No.3
-        let { offsetX : x , offsetY : y } = e ;
+const sortedBands = bands.sort(function (a,b) {
+        if  (strip(a) > strip(b) ){
+                return 1;
+        }else{
+                return -1;
+        }
+});
+
+const sortedBands = bands.sort((a,b) => 
+        strip(a) > strip(b) ? 1 : -1);
+
+
 ```
 
 --- 
 
 ## 參考資料
 github:
-- [16 - Mouse Move Shadow](https://github.com/guahsu/JavaScript30/tree/master/16_Mouse-Move-Shadow)
-- [16 文字阴影的鼠标随动效果](https://github.com/soyaine/JavaScript30/tree/master/16%20-%20Mouse%20Move%20Shadow)
+- [17 - Sort Without Articles](https://github.com/guahsu/JavaScript30/tree/master/17_Sort-Without-Articles)
+- [17 数组的去前缀排序](https://github.com/soyaine/JavaScript30/tree/master/17%20-%20Sort%20Without%20Articles)
 
-hackmd筆記：[JS30 - CSS Text Shadow Mouse Move Effect](https://hackmd.io/QPM7T3t5TQmJIUBJAT4AqA?view)
+hackmd筆記：[JS30 - Sorting Band Name without articles](https://hackmd.io/@dadidi910/ryIh0LLC_)
 
-鐵人賽文章：[JS30-Day16-Mouse Move Shadow](https://ithelp.ithome.com.tw/articles/10195564)
+鐵人賽文章：[JS30-Day17-Sort Without Articles](https://ithelp.ithome.com.tw/articles/10195945)
 
-YT影片：[深入淺出 Javascript30 快速導覽：Day 16：Mouse Move Shadow](https://www.youtube.com/watch?v=fa9Lk2KnARY&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&index=18&t=1455s)
+YT影片：[深入淺出 Javascript30 快速導覽：Day 17：Sort Without Articles](https://www.youtube.com/watch?v=_fG7bQTSQ6M&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&index=17)
 
 
 
