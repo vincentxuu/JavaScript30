@@ -10,49 +10,29 @@
 
 關鍵
 1. 取得元素的控制權
-2. 監聽元素
+2. 修正資料
 3. 改變畫面內容
 
 *取得元素的控制權*
 ``` 
-      const hero = document.querySelector(".hero");
-      const text = hero.querySelector("h1");
+const band = document.getElementById('bands');
+
 ```
 
-*監聽元素*
+*修正資料*
 ```
-      hero.addEventListener("mousemove", shadow);
+function strip (bandName){
+  return bandName.replace(/^(a |the |an )/i, '').trim();
+}
+
+const sortedBands = bands.sort((a,b)=> strip(a) > strip(b) ? 1 : -1);
 
 ```
 
 *改變畫面內容*
 ```
-       function shadow(e) {
-        const width = hero.offsetWidth;
-        const height = hero.offsetHeight;
-        let x = e.offsetX;
-        let y = e.offsetY;
+band.innerHTML = sortedBands.map(a => `<li>${a}</li>`).join('');
 
-        console.log(width, height, x, y);
-
-        if (this !== e.target) {
-          x = x + e.target.offsetLeft;
-          y = y + e.target.offsetTop;
-        }
-        console.log(this);
-        console.log(width, height, x, y);
-        const walk = 200; // 500px
-
-        const xWalk = Math.round((x / width) * walk - walk / 2);
-        const yWalk = Math.round((y / width) * walk - walk / 2);
-
-        console.log(xWalk, yWalk);
-
-        text.style.textShadow = `
-        ${xWalk}px ${yWalk}px 1px rgba(255,0,255,0.3),
-        ${xWalk * -1}px ${yWalk * -1}px 1px rgba(255,0,0,0.3), 
-        ${xWalk * -0.3}px ${yWalk * -0.3}px 1px rgba(0,0,255,0.3)`;
-      }
 ```
 不同寫法：
 
