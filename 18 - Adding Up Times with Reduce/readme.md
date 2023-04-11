@@ -91,14 +91,14 @@ console.log(hour, min, seconds);
 
 ## 參考資料
 github:
-- [17 - Sort Without Articles](https://github.com/guahsu/JavaScript30/tree/master/17_Sort-Without-Articles)
-- [17 数组的去前缀排序](https://github.com/soyaine/JavaScript30/tree/master/17%20-%20Sort%20Without%20Articles)
+- [18 - Adding Up Times with Reduce](https://github.com/guahsu/JavaScript30/tree/master/18_Adding-Up-Times-with-Reduce)
+- [18 使用reduce进行时间累加](https://github.com/soyaine/JavaScript30/tree/master/18%20-%20AddingUpTimesWithReduce#18-%E4%BD%BF%E7%94%A8reduce%E8%BF%9B%E8%A1%8C%E6%97%B6%E9%97%B4%E7%B4%AF%E5%8A%A0)
 
-hackmd筆記：[JS30 - Sorting Band Name without articles](https://hackmd.io/@dadidi910/ryIh0LLC_)
+hackmd筆記：[JS30 - Tally String Times with Reduce](https://hackmd.io/rSQv9v5DS5yfp-5xGyIu-Q?view)
 
-鐵人賽文章：[JS30-Day17-Sort Without Articles](https://ithelp.ithome.com.tw/articles/10195945)
+鐵人賽文章：[JS30-Day18-Add Up Times with Reduce](https://ithelp.ithome.com.tw/articles/10196134)
 
-YT影片：[深入淺出 Javascript30 快速導覽：Day 17：Sort Without Articles](https://www.youtube.com/watch?v=_fG7bQTSQ6M&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&index=17)
+YT影片：[深入淺出 Javascript30 快速導覽：Day 18：Adding Up Times With Reduce](https://www.youtube.com/watch?v=fOZGTOTKHXs&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&index=18)
 
 
 
