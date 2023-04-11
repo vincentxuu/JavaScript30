@@ -183,6 +183,30 @@
     </li>
   </ul>
 <script>
+  const li = document.querySelectorAll('li')
+
+  // let a = Array.from(li).map(item => item.dataset.time) ;
+  // let b = [...li].map(item => item.dataset.time) ;
+  // let c = [].map.call(li,item => item.dataset.time) ;
+  // let d = [].map.apply(li,[item => item.dataset.time]) ;
+
+  let seconds = [...li]
+            .map(item => item.dataset.time)
+            .map(time => {
+              let [min ,sec] = time.split(':');
+              return min * 60 + sec * 1;
+            })
+            .reduce((prev,next) => prev + next ,0);
+  let sec = seconds % 60 ;
+  console.log(sec)
+  let min = ((seconds - sec) / 60) % 60 ;
+  console.log(min);
+  let hour =  (seconds - min * 60 - sec) / (60 * 60);
+  console.log(hour);
+
+  console.log(`${hour}:${min}:${sec}`)
+
+
 </script>
 </body>
 </html>
